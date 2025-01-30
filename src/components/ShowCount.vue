@@ -1,9 +1,12 @@
 <script setup>
+defineProps({
+  count: Number
+})
 </script>
 
 <template>
   <div class="component">
-    <p>Count: </p>
+    <p>Count: {{count}}</p>
   </div>
 </template>
 

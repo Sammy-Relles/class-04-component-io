@@ -1,9 +1,13 @@
 <script setup>
+defineProps({
+  increment: Number
+})
+defineEmits(['increase-by'])
 </script>
 
 <template>
   <div class="component">
-    <button>Increase Count</button>
+    <button v-on:click="$emit('increase-by', increment)">Increase Count by {{ increment }}</button>
   </div>
 </template>
 
